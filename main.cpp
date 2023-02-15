@@ -18,6 +18,25 @@ int main() {
       case 1:
             cout << "You have chosen the East." << endl;
             cout << "The 2022 Eastern Conference Finals: Boston Celtics vs Miami Heat." << endl;
+            cout << endl;
+            cout << "Please select what you would like to view." << endl;
+            cout << "(1) Player Stats" << endl;
+            cout << "(2) Game Box Score" << endl;
+            
+            cin >> choice;
+       
+            switch(choice)
+            {
+              case 1:
+                    cout << "You have chosen to view Player Stats." << endl;
+                    
+                    break;
+                
+              case 2:
+                    cout << "You have chosen to view Game Box Score." << endl;
+                    
+                    break;
+            }
             
             break;
     
