@@ -27,5 +27,4 @@ int main() {
       default:
             cout << "Please enter 1 or 2." << endl;
    }
-  
-  
+}
