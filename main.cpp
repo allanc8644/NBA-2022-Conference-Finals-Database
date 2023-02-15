@@ -10,7 +10,8 @@ int main() {
    cout << endl;
    cout << "(1) East" << endl;
    cout << "(2) West" << endl;
-   cin >> choice;
+   int choice;
+  cin >> choice;
   
    switch(choice)
    {
