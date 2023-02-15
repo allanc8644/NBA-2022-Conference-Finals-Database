@@ -12,3 +12,7 @@ int main() {
    cout << "(2) West" << endl;
    cin >> choice;
   
+  switch(choice)
+    case 1:
+            cout << "You have chosen the East." << endl;
+  
