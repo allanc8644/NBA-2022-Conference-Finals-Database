@@ -15,13 +15,15 @@ int main() {
   
    switch(choice)
    {
-      case '1':
+      case 1:
             cout << "You have chosen the East." << endl;
+            cout << "The 2022 Eastern Conference Finals: Boston Celtics vs Miami Heat." << endl;
             
             break;
     
-      case '2':
+      case 2:
             cout << "You have chosen the West." << endl;
+            cout << "The 2022 Western Conference Finals: Golden State Warriors vs. Dallas Mavericks." << endl; 
   
             break;
       default:
