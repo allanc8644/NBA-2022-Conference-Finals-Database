@@ -1,10 +1,15 @@
-class east {
- private:
-    float fgPercent;
-    int points;
-    int rebounds;
-    int assists;
-    string playerName;
+#include <iostream>
 
- public:
-      void eastInfo();
+class east {
+
+	public:
+		void printGame1();
+		void printGame2();
+		void printGame3();
+		void printGame4();
+		void printGame5();
+		void printGame6();
+		void printGame7();
+
+
+};
