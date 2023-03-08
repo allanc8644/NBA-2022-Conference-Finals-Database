@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <vector>
+
 
 #include "east.h"
 #include "Player.h"
@@ -19,7 +21,7 @@ int main() {
     string nameChoice;
 
     cin >> choice;
-    
+
     switch (choice)
     {
     case 1:
@@ -28,7 +30,7 @@ int main() {
         cout << endl;
         cout << "Please select what you would like to view." << endl;
         cout << "(1) Player Stats" << endl;
-        
+
         cout << "(2) Game Box Score" << endl;
 
         cin >> choice;
@@ -44,8 +46,13 @@ int main() {
 
             if (nameChoice == "Jayson Tatum")
             {
-                Player JayTatum;
+                const int gameNum = 6;
                 
+                int tatumPts[] = {29, 43, 23, 42, 12, 32, 32};
+
+                
+               
+
 
                 cout << "You have chosen to view " << nameChoice << "'s stats." << endl;
                 cout << "Game-wise or Series-wise?" << endl;
@@ -66,19 +73,23 @@ int main() {
                     cout << "Game 5" << endl;
                     cout << "Game 6" << endl;
                     cout << "Game 7" << endl;
-                
+
                     cin >> choice;
+                    
+                    Player JayTatum(tatumPts);
 
                     switch (choice)
                     {
                     case 1:
-                        
-                        cout << "In Game 1 of the 2022 Eastern Conference Finals" << nameChoice << "scored" << JayTatum.printPTS << "points." << endl;
+
+                        int c = 1;
+
+                        cout << "In Game 1 of the 2022 Eastern Conference Finals, " << nameChoice << " scored " << JayTatum.printPTS(c) << " points." << endl;
                     }
 
-                    
+
                 }
-                
+
             }
 
             if (nameChoice == "Jaylen Brown")
@@ -106,42 +117,42 @@ int main() {
             switch (choice)
             {
             case 1:
-                
+
                 eInfo.printGame1();
 
                 break;
 
             case 2:
-                eInfo.printGame2();
+                //eInfo.printGame2();
 
                 break;
-            
-            case 3: 
-                eInfo.printGame3();
+
+            case 3:
+                //eInfo.printGame3();
 
                 break;
 
             case 4:
-
-                eInfo.printGame4();
+                
+                //eInfo.printGame4();
 
                 break;
 
             case 5:
 
-                eInfo.printGame5();
+                //eInfo.printGame5();
 
                 break;
 
             case 6:
 
-                eInfo.printGame6();
+                //eInfo.printGame6();
 
                 break;
 
             case 7:
 
-                eInfo.printGame7();
+                //eInfo.printGame7();
 
                 break;
             }
