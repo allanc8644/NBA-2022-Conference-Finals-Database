@@ -47,9 +47,9 @@ int main() {
             {
                 const int gameNum = 7;
                 
-                int tatumPts[gameNum] = {29, 43, 23, 42, 12, 32, 32};
-
+                int tatumPTS[gameNum] = {29, 43, 23, 42, 12, 32, 32};
                 
+                Player JayTatum(29, 43, 23, 42, 21, 32, 32);
                
 
 
@@ -75,9 +75,6 @@ int main() {
 
                     cin >> choice;
 
-
-                    Player JayTatum(29, 43, 23, 42, 21, 32, 32);
-
                     switch (choice)
                     {
                     case 1:
@@ -88,17 +85,20 @@ int main() {
 
                         break;
 
-
-                    case 2:
-
-                        cout << "Here is " << nameChoice << "'s stats series-wise." << endl;
-
-                        for (int i = 0; i < gameNum; i++) {
-                            cout << "Game 1: " << tatumPts[i] << endl;
-                        }
+                        
                     }
+
+                    break;
+                
+                case 2:
+
+                    cout << "Here is " << nameChoice << "'s stats series-wise." << endl;
+                
                 }
-            }
+                 
+                            
+            
+            }   
 
             if (nameChoice == "Jaylen Brown")
             {
