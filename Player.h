@@ -1,6 +1,5 @@
 #include <iostream>
 
-const int gameNum = 6;
 
 class Player {
 
@@ -15,6 +14,8 @@ private:
 public:
 	
 	int printPTS(int c);
+	int printAST(int c);
+
 	void setPoints(int[]);
 	void setAssists(int asts);
 	void setRebounds(int rebounds);
@@ -22,7 +23,7 @@ public:
 	void setAttepts(int attempt);
 	void setMade(int made);
 
-	Player(int p1, int p2, int p3, int p4, int p5, int p6, int p7)
-		: points{ p1,p2,p3,p4,p5,p6,p7} {};
+	Player(int p1, int p2, int p3, int p4, int p5, int p6, int p7, int a1)
+		: points{ p1,p2,p3,p4,p5,p6,p7}, assists{ a1, p2, p3, p4, p5, p6, p7 } {};
 	
 };
