@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <vector>
 
 
 #include "east.h"
@@ -46,9 +45,9 @@ int main() {
 
             if (nameChoice == "Jayson Tatum")
             {
-                const int gameNum = 6;
+                const int gameNum = 7;
                 
-                int tatumPts[] = {29, 43, 23, 42, 12, 32, 32};
+                int tatumPts[gameNum] = {29, 43, 23, 42, 12, 32, 32};
 
                 
                
@@ -75,21 +74,30 @@ int main() {
                     cout << "Game 7" << endl;
 
                     cin >> choice;
-                    
-                    Player JayTatum(tatumPts);
+
+
+                    Player JayTatum(29, 43, 23, 42, 21, 32, 32);
 
                     switch (choice)
                     {
                     case 1:
 
-                        int c = 1;
+                
 
-                        cout << "In Game 1 of the 2022 Eastern Conference Finals, " << nameChoice << " scored " << JayTatum.printPTS(c) << " points." << endl;
+                        cout << "In Game " << choice << " of the 2022 Eastern Conference Finals, " << nameChoice << " scored " << JayTatum.printPTS(choice-1) << " points." << endl;
+
+                        break;
+
+
+                    case 2:
+
+                        cout << "Here is " << nameChoice << "'s stats series-wise." << endl;
+
+                        for (int i = 0; i < gameNum; i++) {
+                            cout << "Game 1: " << tatumPts[i] << endl;
+                        }
                     }
-
-
                 }
-
             }
 
             if (nameChoice == "Jaylen Brown")
