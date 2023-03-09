@@ -4,6 +4,17 @@
 
 using namespace std;
 
-Player::Player(int PTS[6]) {
-	points[6] = PTS[6];
+int Player::printPTS(int c) {
+
+	return points[c];
+}
+
+void Player::setPoints(int PTS[7]) {
+
+	points[7] = PTS[7];
+}
+
+int Player::printAST(int c) {
+	
+	return assists[c];
 }
