@@ -47,9 +47,8 @@ int main() {
             {
                 const int gameNum = 7;
                 
-                int tatumPTS[gameNum] = {29, 43, 23, 42, 12, 32, 32};
                 
-                Player JayTatum(29, 43, 23, 42, 21, 32, 32);
+                Player JayTatum(29, 43, 23, 42, 21, 32, 32, 6);
                
 
 
@@ -82,7 +81,7 @@ int main() {
                 
 
                         cout << "In Game " << choice << " of the 2022 Eastern Conference Finals, " << nameChoice << " scored " << JayTatum.printPTS(choice-1) << " points." << endl;
-
+                        cout << "He also had " << JayTatum.printAST(choice - 1) << " assists." << endl;
                         break;
 
                         
