@@ -85,7 +85,7 @@ int main() {
                 
 
                         cout << "In Game " << choice << " of the 2022 Eastern Conference Finals, " << nameChoice << " scored " << JayTatum.printPTS(choice-1) << " points." << endl;
-                        cout << "He also had " << JayTatum.printAST(choice - 1) << " assists." << endl;
+                        cout << "He also had " << JayTatum.printAST(choice - 1) << " assists and " << JayTatum.printREB(choice - 1) << " rebounds." << endl;
                         break;
 
                         
@@ -230,4 +230,3 @@ int main() {
         cout << "Please enter 1 or 2." << endl;
     }
 }
-
