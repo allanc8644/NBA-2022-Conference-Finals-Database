@@ -9,7 +9,10 @@ using namespace std;
 
 east eInfo;
 
+const int gameNum = 7;
+
 int main() {
+    
 
     cout << "Welcome to the NBA 2022 Conference Finals Database." << endl;
     cout << "Please select the Conference you would like to view." << endl;
@@ -37,7 +40,7 @@ int main() {
         switch (choice)
         {
         case 1:
-
+           
             cout << "Who would you like to view?" << endl;
             cout << "Type first and last name. Case-sensitive." << endl;
 
@@ -46,9 +49,7 @@ int main() {
 
             if (nameChoice == "Jayson Tatum")
             {
-                const int gameNum = 7;
-                
-                
+                              
                 Player JayTatum(29, 27, 10, 31, 22, 30, 26, 
                                  6, 5, 4, 5, 9, 4, 6,
                                  8, 5, 6, 8, 12, 9, 10);
@@ -116,22 +117,44 @@ int main() {
 
             if (nameChoice == "Jaylen Brown")
             {
-             
+                Player JayBrown();
+                
                 cout << "You have chosen to view " << nameChoice << "'s stats." << endl;
+                cout << "Game-wise or Series-wise?" << endl;
+                cout << "(1) Game" << endl;
+                cout << "(2) Series" << endl;
+
+                cin >> choice;
             
             }
 
             if (nameChoice == "Al Horford")
             {
+                Player AlHorford();
 
+                cout << "You have chosen to view " << nameChoice << "'s stats." << endl;
+                cout << "Game-wise or Series-wise?" << endl;
+                cout << "(1) Game" << endl;
+                cout << "(2) Series" << endl;
 
+                cin >> choice;
+            }
 
+            if (nameChoice == "Grant Williams")
+            {
+                Player GrantWilliams();
 
+                cout << "You have chosen to view " << nameChoice << "'s stats." << endl;
+                cout << "Game-wise or Series-wise?" << endl;
+                cout << "(1) Game" << endl;
+                cout << "(2) Series" << endl;
 
+                cin >> choice;
 
 
 
             }
+
             break;
 
         case 2:
@@ -207,3 +230,4 @@ int main() {
         cout << "Please enter 1 or 2." << endl;
     }
 }
+
