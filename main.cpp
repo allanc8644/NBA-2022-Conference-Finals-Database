@@ -37,6 +37,7 @@ int main() {
         switch (choice)
         {
         case 1:
+
             cout << "Who would you like to view?" << endl;
             cout << "Type first and last name. Case-sensitive." << endl;
 
@@ -48,7 +49,9 @@ int main() {
                 const int gameNum = 7;
                 
                 
-                Player JayTatum(29, 43, 23, 42, 21, 32, 32, 6);
+                Player JayTatum(29, 27, 10, 31, 22, 30, 26, 
+                                 6, 5, 4, 5, 9, 4, 6,
+                                 8, 5, 6, 8, 12, 9, 10);
                
 
 
@@ -92,7 +95,19 @@ int main() {
                 case 2:
 
                     cout << "Here is " << nameChoice << "'s stats series-wise." << endl;
-                
+                    
+                    int totalPoints = 0;
+
+                    for (int i = 0; i < gameNum; i++) {
+
+                       totalPoints += JayTatum.printPTS(i);
+
+                        cout << "Game " << i + 1 << ": " << JayTatum.printPTS(i) << " PTS" << endl;
+
+
+                     }
+                    cout << "Total Points: " << totalPoints;
+
                 }
                  
                             
@@ -101,9 +116,22 @@ int main() {
 
             if (nameChoice == "Jaylen Brown")
             {
+             
                 cout << "You have chosen to view " << nameChoice << "'s stats." << endl;
+            
             }
 
+            if (nameChoice == "Al Horford")
+            {
+
+
+
+
+
+
+
+
+            }
             break;
 
         case 2:
