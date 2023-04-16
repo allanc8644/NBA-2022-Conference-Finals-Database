@@ -17,6 +17,7 @@ public:
 	int printPTS(int c);
 	int printAST(int c);
 	int printREB(int c);
+	int printFGP(int c);
 
 	void setPoints(int[]);
 	void setAssists(int asts);
