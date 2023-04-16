@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include <iomanip>
 
 #include "east.h"
 #include "Player.h"
@@ -52,7 +52,10 @@ int main() {
                               
                 Player JayTatum(29, 27, 10, 31, 22, 30, 26, 
                                  6, 5, 4, 5, 9, 4, 6,
-                                 8, 5, 6, 8, 12, 9, 10);
+                                 8, 5, 6, 8, 12, 9, 10,
+                                 47.6, 61.5, 21.4, 50.0, 35.0, 75.0, 42.9,
+                                 21, 13, 14, 16, 20, 12, 21,
+                                 10, 8, 3, 8, 7, 9, 9);
                
 
 
@@ -98,17 +101,41 @@ int main() {
                     cout << "Here is " << nameChoice << "'s stats series-wise." << endl;
                     
                     int totalPoints = 0;
-
+                    float totalAssists = 0;
+                    int totalRebounds = 0;
+                    float avgPTS = 0.0;
+                    float avgAST = 0.0;
+                    
+                    cout << fixed << showpoint << setprecision(1);
                     for (int i = 0; i < gameNum; i++) {
 
                        totalPoints += JayTatum.printPTS(i);
 
-                        cout << "Game " << i + 1 << ": " << JayTatum.printPTS(i) << " PTS" << endl;
-
-
                      }
-                    cout << "Total Points: " << totalPoints;
+                    cout << "Total Points: " << totalPoints << endl;
 
+                    avgPTS = totalPoints / gameNum;
+
+                    cout << "Average Points: " << avgPTS << endl;
+
+                    for (int i = 0; i < gameNum; i++) {
+
+                        totalAssists += JayTatum.printAST(i);
+
+                    }
+                    cout << "Total Assists: " << totalAssists << endl;
+
+                    avgAST = totalAssists / gameNum;
+
+                    cout << "Average Assists: " << avgAST << endl;
+
+                    for (int i = 0; i < gameNum; i++) {
+
+                        totalRebounds += JayTatum.printREB(i);
+
+                    }
+                    cout << "Total Rebounds: " << totalRebounds;
+                    
                 }
                  
                             
@@ -230,3 +257,5 @@ int main() {
         cout << "Please enter 1 or 2." << endl;
     }
 }
+
+          
