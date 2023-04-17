@@ -1,5 +1,3 @@
-#include <iostream>
-
 
 class Player {
 
@@ -17,15 +15,10 @@ public:
 	int printPTS(int c);
 	int printAST(int c);
 	int printREB(int c);
-	int printFGP(int c);
+	float printFGP(int c);
+	int printFGA(int c);
+	int printFGM(int c);
 
-	void setPoints(int[]);
-	void setAssists(int asts);
-	void setRebounds(int rebounds);
-	void setPercent(float percentage);
-	void setAttepts(int attempt);
-	void setMade(int made);
-	void setName(std::string n);
 
 	Player(int p1, int p2, int p3, int p4, int p5, int p6, int p7,
 		   int a1, int a2, int a3, int a4, int a5, int a6, int a7,
