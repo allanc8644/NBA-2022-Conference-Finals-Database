@@ -81,21 +81,11 @@ int main() {
 
                     cin >> choice;
 
-                    switch (choice)
-                    {
-                    case 1:
-
-                
-
-                        cout << "In Game " << choice << " of the 2022 Eastern Conference Finals, " << nameChoice << " scored " << JayTatum.printPTS(choice-1) << " points." << endl;
+                        cout << "In Game " << choice << " of the 2022 Eastern Conference Finals, " << nameChoice << " scored " << JayTatum.printPTS(choice - 1) << " points." << endl;
                         cout << "He also had " << JayTatum.printAST(choice - 1) << " assists and " << JayTatum.printREB(choice - 1) << " rebounds." << endl;
+                        cout << "He shot " << JayTatum.printFGM(choice - 1) << "/" << JayTatum.printFGA(choice - 1) << " for " << JayTatum.printFGP(choice - 1) << "%." << endl;
                         break;
-
-                        
-                    }
-
-                    break;
-                
+                 
                 case 2:
 
                     cout << "Here is " << nameChoice << "'s stats series-wise." << endl;
@@ -257,5 +247,4 @@ int main() {
         cout << "Please enter 1 or 2." << endl;
     }
 }
-
-          
+    
