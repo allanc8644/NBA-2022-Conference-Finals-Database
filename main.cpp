@@ -9,7 +9,7 @@ using namespace std;
 
 east eInfo;
 
-const int gameNum = 7;
+const int egameNum = 7;
 
 int main() {
     
@@ -95,36 +95,41 @@ int main() {
                     int totalRebounds = 0;
                     float avgPTS = 0.0;
                     float avgAST = 0.0;
+                    float avgREB = 0.0;
                     
                     cout << fixed << showpoint << setprecision(1);
-                    for (int i = 0; i < gameNum; i++) {
+                    for (int i = 0; i < egameNum; i++) {
 
                        totalPoints += JayTatum.printPTS(i);
 
                      }
                     cout << "Total Points: " << totalPoints << endl;
 
-                    avgPTS = totalPoints / gameNum;
+                    avgPTS = totalPoints / egameNum;
 
                     cout << "Average Points: " << avgPTS << endl;
 
-                    for (int i = 0; i < gameNum; i++) {
+                    for (int i = 0; i < egameNum; i++) {
 
                         totalAssists += JayTatum.printAST(i);
 
                     }
                     cout << "Total Assists: " << totalAssists << endl;
 
-                    avgAST = totalAssists / gameNum;
+                    avgAST = totalAssists / egameNum;
 
                     cout << "Average Assists: " << avgAST << endl;
 
-                    for (int i = 0; i < gameNum; i++) {
+                    for (int i = 0; i < egameNum; i++) {
 
                         totalRebounds += JayTatum.printREB(i);
 
                     }
-                    cout << "Total Rebounds: " << totalRebounds;
+                    cout << "Total Rebounds: " << totalRebounds << endl;
+
+                    avgREB = totalRebounds / egameNum;
+
+                    cout << "Average Rebounds: " << avgREB << endl;
                     
                 }
                  
@@ -134,15 +139,89 @@ int main() {
 
             if (nameChoice == "Jaylen Brown")
             {
-                Player JayBrown();
-                
+                Player JayBrown(24, 24, 40, 12, 25, 20, 24,
+                                3, 3, 1, 2, 1, 5, 6,
+                                10, 8, 9, 7, 4, 6, 6,
+                                41.2, 52.9, 70.0, 25.0, 52.6, 46.2, 53.3,
+                                17, 17, 20, 20, 19, 13, 15,
+                                7, 9, 14, 5, 10, 6, 8);
+
+
+
                 cout << "You have chosen to view " << nameChoice << "'s stats." << endl;
                 cout << "Game-wise or Series-wise?" << endl;
                 cout << "(1) Game" << endl;
                 cout << "(2) Series" << endl;
 
                 cin >> choice;
-            
+
+                switch (choice)
+                {
+                case 1:
+                    cout << endl;
+                    cout << "Select which game you would like to view." << endl;
+                    cout << "Game 1" << endl;
+                    cout << "Game 2" << endl;
+                    cout << "Game 3" << endl;
+                    cout << "Game 4" << endl;
+                    cout << "Game 5" << endl;
+                    cout << "Game 6" << endl;
+                    cout << "Game 7" << endl;
+
+                    cin >> choice;
+
+                    cout << "In Game " << choice << " of the 2022 Eastern Conference Finals, " << nameChoice << " scored " << JayBrown.printPTS(choice - 1) << " points." << endl;
+                    cout << "He also had " << JayBrown.printAST(choice - 1) << " assists and " << JayBrown.printREB(choice - 1) << " rebounds." << endl;
+                    cout << "He shot " << JayBrown.printFGM(choice - 1) << "/" << JayBrown.printFGA(choice - 1) << " for " << JayBrown.printFGP(choice - 1) << "%." << endl;
+                    break;
+
+                case 2:
+
+                    cout << "Here is " << nameChoice << "'s stats series-wise." << endl;
+
+                    int totalPoints = 0;
+                    float totalAssists = 0;
+                    int totalRebounds = 0;
+                    float avgPTS = 0.0;
+                    float avgAST = 0.0;
+                    float avgREB = 0.0;
+
+                    cout << fixed << showpoint << setprecision(1);
+                    for (int i = 0; i < egameNum; i++) {
+
+                        totalPoints += JayBrown.printPTS(i);
+
+                    }
+                    cout << "Total Points: " << totalPoints << endl;
+
+                    avgPTS = totalPoints / egameNum;
+
+                    cout << "Average Points: " << avgPTS << endl;
+
+                    for (int i = 0; i < egameNum; i++) {
+
+                        totalAssists += JayBrown.printAST(i);
+
+                    }
+                    cout << "Total Assists: " << totalAssists << endl;
+
+                    avgAST = totalAssists / egameNum;
+
+                    cout << "Average Assists: " << avgAST << endl;
+
+                    for (int i = 0; i < egameNum; i++) {
+
+                        totalRebounds += JayBrown.printREB(i);
+
+                    }
+                    cout << "Total Rebounds: " << totalRebounds << endl;
+
+                    avgREB = totalRebounds / egameNum;
+
+                    cout << "Average Rebounds: " << avgREB << endl;
+
+                }
+              
             }
 
             if (nameChoice == "Al Horford")
@@ -247,4 +326,5 @@ int main() {
         cout << "Please enter 1 or 2." << endl;
     }
 }
-    
+
+        
